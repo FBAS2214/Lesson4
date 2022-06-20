@@ -1,0 +1,139 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--<Grid.Background>
+            <LinearGradientBrush EndPoint="0.9,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFA93737"  Offset="0"/>
+                <GradientStop Color="White" Offset="0.5"/>
+                <GradientStop Color="#FF71A745" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>-->
+
+
+        <!--<ComboBox Height="100" VerticalAlignment="Top">
+
+            --><!--<ComboBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel></WrapPanel>
+                </ItemsPanelTemplate>
+            </ComboBox.ItemsPanel>--><!--
+
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="100" Height="100" Source="/Images/Csharp_Logo.png"></Image>
+                    <TextBox Width="150" Height="100"></TextBox>
+                    <Button Width="150" Height="100">Select</Button>
+                </StackPanel>
+            </ComboBoxItem>
+
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="100" Height="100" Source="/Images/mario.png"></Image>
+                    <TextBox Width="150" Height="100"></TextBox>
+                    <Button Width="150" Height="100">Select</Button>
+                </StackPanel>
+            </ComboBoxItem>
+
+        </ComboBox>-->
+
+
+
+        <!--<ListView Name="listView" ItemsSource="{Binding People}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="auto"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Firstname}" Header="FirstName" Width="auto"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Lastname}" Header="LastName" Width="auto"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Gender}" Header="Gender" Width="auto"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Phone}" Header="Phone" Width="auto"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Email}" Header="Email" Width="auto"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Address}" Header="Address" Width="auto"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding DateOfBirth}" Header="DateOfBirth" Width="auto"></GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+
+
+
+
+
+        <!--<Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="New"></MenuItem>
+                <MenuItem Header="Open"></MenuItem>
+                --><!--<Separator ></Separator>--><!--
+                <RibbonSeparator></RibbonSeparator>
+                <MenuItem Header="Save"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Edit"></MenuItem>
+        </Menu>-->
+
+
+
+        <!--<TreeView>
+            <TreeViewItem  Header="Quick Access">
+                <TreeViewItem Header="Desktop"></TreeViewItem>
+                <TreeViewItem Header="Downloads"></TreeViewItem>
+                <TreeViewItem Header="Documents"></TreeViewItem>
+            </TreeViewItem>
+
+            <TreeViewItem Header="This PC"></TreeViewItem>
+        </TreeView>-->
+
+
+
+        <!--<ToolBar VerticalAlignment="Top">
+            <Button>Undo</Button>
+            <Button>Redo</Button>
+            <Button>Save</Button>
+            <ComboBox Width="60">
+                <ComboBoxItem>Debug</ComboBoxItem>
+                <ComboBoxItem>Release</ComboBoxItem>
+            </ComboBox>
+        </ToolBar>-->
+
+
+        <!--<StatusBar Height="20" VerticalAlignment="Bottom" Background="Aqua"></StatusBar>-->
+
+
+
+
+        <!--<Calendar></Calendar>-->
+        <!--<DatePicker></DatePicker>-->
+
+
+        <ListView ItemsSource="{Binding People}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <Image Visibility="Visible" Source="{Binding ImageUrl}" Height="100" Width="100"></Image>
+
+                        <StackPanel Width="250" Grid.Column="1" Margin="15">
+                            <TextBlock Text="{Binding Firstname}"></TextBlock>
+                            <TextBlock Text="{Binding Email}"></TextBlock>
+                            <TextBlock Text="{Binding DateOfBirth}"></TextBlock>
+                        </StackPanel>
+
+                        <Button Grid.Column="2" Width="90" >Select</Button>
+                        
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>
